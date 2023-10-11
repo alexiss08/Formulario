@@ -52,6 +52,16 @@ public class frmProductos extends javax.swing.JFrame {
         txtPOxigeno = new javax.swing.JTextField();
         txtPDioxidoCarbono = new javax.swing.JTextField();
         txtPVaporAgua = new javax.swing.JTextField();
+        lblSalinidad = new javax.swing.JLabel();
+        txtSalinidad = new javax.swing.JTextField();
+        lblMetodoCongelacion = new javax.swing.JLabel();
+        txtMetodoCongelacion = new javax.swing.JTextField();
+        lblTiempoExposicion = new javax.swing.JLabel();
+        txtTiempoExposicion = new javax.swing.JTextField();
+        lblCodigoAlimentario = new javax.swing.JLabel();
+        txtCodigoAlimentario = new javax.swing.JTextField();
+        lblTemperaturaRecomendada = new javax.swing.JLabel();
+        txtTemperaturaRecomendada = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inventario Maxi Pali");
@@ -94,6 +104,11 @@ public class frmProductos extends javax.swing.JFrame {
 
         btngProductos.add(rbtnCongelados);
         rbtnCongelados.setText("Congelados");
+        rbtnCongelados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnCongeladosActionPerformed(evt);
+            }
+        });
 
         btngProductos.add(rbtnRefrigerados);
         rbtnRefrigerados.setText("Refrigerados");
@@ -128,6 +143,11 @@ public class frmProductos extends javax.swing.JFrame {
 
         btngCongelados.add(rbtnAgua);
         rbtnAgua.setText("Congelado por Agua");
+        rbtnAgua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnAguaActionPerformed(evt);
+            }
+        });
 
         btngCongelados.add(rbtnNitrogeno);
         rbtnNitrogeno.setText("Congelado Por Nitrogeno");
@@ -145,75 +165,147 @@ public class frmProductos extends javax.swing.JFrame {
 
         lblPVaporAgua.setText("Vapor de Agua %");
 
+        txtPNitrogeno.setEnabled(false);
         txtPNitrogeno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPNitrogenoActionPerformed(evt);
             }
         });
 
+        txtPOxigeno.setEnabled(false);
+        txtPOxigeno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPOxigenoActionPerformed(evt);
+            }
+        });
+
+        txtPDioxidoCarbono.setEnabled(false);
+        txtPDioxidoCarbono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPDioxidoCarbonoActionPerformed(evt);
+            }
+        });
+
+        txtPVaporAgua.setEnabled(false);
+        txtPVaporAgua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPVaporAguaActionPerformed(evt);
+            }
+        });
+
+        lblSalinidad.setText("Salinidad del agua g/L");
+
+        txtSalinidad.setEnabled(false);
+
+        lblMetodoCongelacion.setText("Metodo de congelación");
+
+        txtMetodoCongelacion.setEnabled(false);
+
+        lblTiempoExposicion.setText("Tiempo de Exposición  m/s");
+
+        txtTiempoExposicion.setEnabled(false);
+
+        lblCodigoAlimentario.setText("Codigo Alimentario");
+
+        txtCodigoAlimentario.setEnabled(false);
+
+        lblTemperaturaRecomendada.setText("Temperatura Recomendada");
+
+        txtTemperaturaRecomendada.setEnabled(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbtnFrescos)
                             .addComponent(lblFechaCaducidad, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblLote, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rbtnFrescos)
-                                .addGap(45, 45, 45)
-                                .addComponent(rbtnCongelados))
                             .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
+                            .addComponent(lblLote, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbtnAire))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(69, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cmbPais, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ftxtFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rbtnRefrigerados))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(rbtnAgua)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(rbtnNitrogeno))
+                                        .addGap(44, 44, 44)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(lblSalinidad)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(txtSalinidad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(rbtnAgua))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGap(12, 12, 12)
+                                                .addComponent(lblMetodoCongelacion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(txtMetodoCongelacion, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(15, 15, 15))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(rbtnNitrogeno)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(lblTiempoExposicion)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(txtTiempoExposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(17, 17, 17))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(ftxtFechaCaducidad)
-                                            .addComponent(txtLote, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnCrear)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnMostrar)))
-                                .addGap(32, 32, 32))))
+                                            .addComponent(ftxtFechaCaducidad, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(txtLote, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnCrear)
+                                                .addGap(64, 64, 64)))
+                                        .addContainerGap())))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblTemperaturaRecomendada, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtTemperaturaRecomendada, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblCodigoAlimentario, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(52, 52, 52)
+                                        .addComponent(txtCodigoAlimentario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rbtnRefrigerados)
+                                        .addGap(134, 134, 134)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnMostrar)
+                                            .addComponent(rbtnCongelados))))
+                                .addGap(43, 43, 43))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPOxigeno)
-                            .addComponent(rbtnAire)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblPNitrogeno)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtPNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblPDioxidoCarbono)
-                                        .addComponent(lblPVaporAgua))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtPVaporAgua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtPDioxidoCarbono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtPOxigeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(lblFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cmbPais, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ftxtFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPOxigeno)
+                    .addComponent(lblPDioxidoCarbono)
+                    .addComponent(lblPNitrogeno)
+                    .addComponent(lblPVaporAgua))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPOxigeno, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPDioxidoCarbono, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPVaporAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,10 +315,10 @@ public class frmProductos extends javax.swing.JFrame {
                     .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ftxtFechaCaducidad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblFechaCaducidad, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblLote, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,16 +327,20 @@ public class frmProductos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtnFrescos, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbtnCongelados, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbtnRefrigerados, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rbtnRefrigerados, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rbtnCongelados, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftxtFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(ftxtFechaEnvasado, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCodigoAlimentario, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoAlimentario, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbPais, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbPais, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTemperaturaRecomendada, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTemperaturaRecomendada, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtnAire, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -253,20 +349,26 @@ public class frmProductos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSalinidad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSalinidad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMetodoCongelacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMetodoCongelacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPOxigeno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPOxigeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPOxigeno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTiempoExposicion)
+                    .addComponent(txtTiempoExposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPDioxidoCarbono, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPDioxidoCarbono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPDioxidoCarbono, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPVaporAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPVaporAgua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(txtPVaporAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
@@ -281,6 +383,17 @@ public class frmProductos extends javax.swing.JFrame {
             if (!ftxtFechaCaducidad.getText().isEmpty()) {
                 if (!txtLote.getText().isEmpty()) {
                     if (esNumeroEntero(txtLote.getText())) {
+                        if (rbtnFrescos.isSelected()) { // Validación específica para "Productos Frescos"
+                            if (ftxtFechaEnvasado.getText().isEmpty()) {
+                                JOptionPane.showMessageDialog(this, "Debe ingresar la fecha de envasado");
+                                ftxtFechaEnvasado.requestFocus();
+                                return; // Detener la creación del producto si falta información
+                            } else if (cmbPais.getSelectedIndex() == 0) {
+                                JOptionPane.showMessageDialog(this, "Debe seleccionar un país de origen");
+                                cmbPais.requestFocus();
+                                return; // Detener la creación del producto si falta información
+                            }
+                        }
                         producto = new Productos(this.txtNombre.getText(), this.ftxtFechaCaducidad.getText(), Integer.parseInt(this.txtLote.getText()));
                         JOptionPane.showMessageDialog(null, "Producto creado con éxito");
                     } else {
@@ -319,6 +432,8 @@ public class frmProductos extends javax.swing.JFrame {
         if (rbtnFrescos.isSelected()){
             ftxtFechaEnvasado.setEnabled(true);
             cmbPais.setEnabled(true);
+            txtCodigoAlimentario.setEnabled(false);
+            txtTemperaturaRecomendada.setEnabled(false);
             ftxtFechaEnvasado.requestFocus();
         }
     }//GEN-LAST:event_rbtnFrescosActionPerformed
@@ -347,20 +462,69 @@ public class frmProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLoteActionPerformed
 
     private void rbtnNitrogenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnNitrogenoActionPerformed
-        // TODO add your handling code here:
+        txtPNitrogeno.setEnabled(false);
+        txtPOxigeno.setEnabled(false);
+        txtPDioxidoCarbono.setEnabled(false);
+        txtPVaporAgua.setEnabled(false);
+        txtSalinidad.setEnabled(false);
+        txtMetodoCongelacion.setEnabled(true);
+        txtTiempoExposicion.setEnabled(true);
+
     }//GEN-LAST:event_rbtnNitrogenoActionPerformed
 
     private void txtPNitrogenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPNitrogenoActionPerformed
-        // TODO add your handling code here:
+         if (rbtnAire.isSelected()) {
+            rbtnAire.setEnabled(true);
+            rbtnAgua.setEnabled(false);
+            rbtnNitrogeno.setEnabled(false);
+        }
+        else{
+            rbtnCongelados.setEnabled(false);
+            rbtnAire.setEnabled(false);
+        }
     }//GEN-LAST:event_txtPNitrogenoActionPerformed
 
     private void rbtnAireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnAireActionPerformed
-         if (rbtnAire.isSelected()) {
-        txtPNitrogeno.setEnabled(true); // Habilitar el JTextField
-    } else {
-        txtPNitrogeno.setEnabled(false); // Deshabilitar el JTextField
-    }
+        if (rbtnAire.isSelected()) {
+            txtPNitrogeno.setEnabled(true); // Habilitar el JTextField
+            txtPOxigeno.setEnabled(true);
+            txtPDioxidoCarbono.setEnabled(true);
+            txtPVaporAgua.setEnabled(true);
+            txtSalinidad.setEnabled(false);
+        } 
     }//GEN-LAST:event_rbtnAireActionPerformed
+
+    private void rbtnCongeladosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnCongeladosActionPerformed
+       
+    }//GEN-LAST:event_rbtnCongeladosActionPerformed
+
+    private void txtPOxigenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPOxigenoActionPerformed
+        if (rbtnAire.isSelected()) {
+            txtPNitrogeno.setEnabled(true); // Habilitar el JTextField
+        } else {
+            txtPNitrogeno.setEnabled(false); // Deshabilitar el JTextField
+        }
+    }//GEN-LAST:event_txtPOxigenoActionPerformed
+
+    private void txtPDioxidoCarbonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPDioxidoCarbonoActionPerformed
+        if (rbtnAire.isSelected()) {
+            txtPNitrogeno.setEnabled(true); // Habilitar el JTextField
+        } else {
+            txtPNitrogeno.setEnabled(false); // Deshabilitar el JTextField
+        }
+    }//GEN-LAST:event_txtPDioxidoCarbonoActionPerformed
+
+    private void txtPVaporAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPVaporAguaActionPerformed
+        //
+    }//GEN-LAST:event_txtPVaporAguaActionPerformed
+
+    private void rbtnAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnAguaActionPerformed
+        txtPNitrogeno.setEnabled(false);
+        txtPOxigeno.setEnabled(false);
+        txtPDioxidoCarbono.setEnabled(false);
+        txtPVaporAgua.setEnabled(false);
+        txtSalinidad.setEnabled(true);
+    }//GEN-LAST:event_rbtnAguaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -406,26 +570,36 @@ public class frmProductos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbPais;
     private javax.swing.JFormattedTextField ftxtFechaCaducidad;
     private javax.swing.JFormattedTextField ftxtFechaEnvasado;
+    private javax.swing.JLabel lblCodigoAlimentario;
     private javax.swing.JLabel lblFechaCaducidad;
     private javax.swing.JLabel lblFechaEnvasado;
     private javax.swing.JLabel lblLote;
+    private javax.swing.JLabel lblMetodoCongelacion;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPDioxidoCarbono;
     private javax.swing.JLabel lblPNitrogeno;
     private javax.swing.JLabel lblPOxigeno;
     private javax.swing.JLabel lblPVaporAgua;
     private javax.swing.JLabel lblPais;
+    private javax.swing.JLabel lblSalinidad;
+    private javax.swing.JLabel lblTemperaturaRecomendada;
+    private javax.swing.JLabel lblTiempoExposicion;
     private javax.swing.JRadioButton rbtnAgua;
     private javax.swing.JRadioButton rbtnAire;
     private javax.swing.JRadioButton rbtnCongelados;
     private javax.swing.JRadioButton rbtnFrescos;
     private javax.swing.JRadioButton rbtnNitrogeno;
     private javax.swing.JRadioButton rbtnRefrigerados;
+    private javax.swing.JTextField txtCodigoAlimentario;
     private javax.swing.JTextField txtLote;
+    private javax.swing.JTextField txtMetodoCongelacion;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtPDioxidoCarbono;
     private javax.swing.JTextField txtPNitrogeno;
     private javax.swing.JTextField txtPOxigeno;
     private javax.swing.JTextField txtPVaporAgua;
+    private javax.swing.JTextField txtSalinidad;
+    private javax.swing.JTextField txtTemperaturaRecomendada;
+    private javax.swing.JTextField txtTiempoExposicion;
     // End of variables declaration//GEN-END:variables
 }

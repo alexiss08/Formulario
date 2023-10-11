@@ -34,84 +34,123 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblFechaCaducidad" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="rbtnFrescos" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFechaCaducidad" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="lblNombre" min="-2" pref="135" max="-2" attributes="0"/>
                           <Component id="lblLote" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="rbtnFrescos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="rbtnCongelados" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="lblNombre" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
-                          <Component id="lblFechaEnvasado" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
-                          <Component id="lblPais" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="rbtnAire" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNombre" min="-2" pref="294" max="-2" attributes="0"/>
-                              <EmptySpace pref="69" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cmbPais" min="-2" pref="148" max="-2" attributes="0"/>
-                                  <Component id="ftxtFechaEnvasado" min="-2" pref="118" max="-2" attributes="0"/>
-                                  <Component id="rbtnRefrigerados" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="rbtnAgua" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="rbtnNitrogeno" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lblSalinidad" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="txtSalinidad" min="-2" pref="65" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="rbtnAgua" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                              <Component id="lblMetodoCongelacion" min="-2" pref="130" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="txtMetodoCongelacion" min="-2" pref="65" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="rbtnNitrogeno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="lblTiempoExposicion" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="txtTiempoExposicion" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="ftxtFechaCaducidad" max="32767" attributes="0"/>
-                                          <Component id="txtLote" pref="118" max="32767" attributes="0"/>
+                                          <Component id="ftxtFechaCaducidad" min="-2" pref="118" max="-2" attributes="0"/>
+                                          <Component id="txtNombre" min="-2" pref="294" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="txtLote" min="-2" pref="118" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="btnCrear" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnCrear" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnMostrar" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblTemperaturaRecomendada" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txtTemperaturaRecomendada" min="-2" pref="90" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblCodigoAlimentario" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Component id="txtCodigoAlimentario" min="-2" pref="90" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="rbtnRefrigerados" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btnMostrar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rbtnCongelados" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblPOxigeno" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnAire" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="lblPNitrogeno" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="txtPNitrogeno" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblPDioxidoCarbono" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPVaporAgua" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtPVaporAgua" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtPDioxidoCarbono" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtPOxigeno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                          <Component id="lblFechaEnvasado" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="lblPais" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cmbPais" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="ftxtFechaEnvasado" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblPOxigeno" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPDioxidoCarbono" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPNitrogeno" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPVaporAgua" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtPOxigeno" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="txtPDioxidoCarbono" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="txtPNitrogeno" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="txtPVaporAgua" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -124,11 +163,11 @@
                   <Component id="txtNombre" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ftxtFechaCaducidad" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="lblFechaCaducidad" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ftxtFechaCaducidad" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblFechaCaducidad" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblLote" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="btnCrear" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
@@ -138,18 +177,22 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="rbtnFrescos" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="rbtnCongelados" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="rbtnRefrigerados" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="rbtnCongelados" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblFechaEnvasado" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="ftxtFechaEnvasado" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblCodigoAlimentario" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="txtCodigoAlimentario" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPais" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="cmbPais" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblTemperaturaRecomendada" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="txtTemperaturaRecomendada" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -160,24 +203,30 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPNitrogeno" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="txtPNitrogeno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPNitrogeno" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblSalinidad" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="txtSalinidad" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblMetodoCongelacion" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="txtMetodoCongelacion" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPOxigeno" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="txtPOxigeno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPOxigeno" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblTiempoExposicion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTiempoExposicion" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPDioxidoCarbono" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="txtPDioxidoCarbono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPDioxidoCarbono" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPVaporAgua" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="txtPVaporAgua" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPVaporAgua" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -244,6 +293,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Congelados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtnCongeladosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rbtnRefrigerados">
       <Properties>
@@ -313,6 +365,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Congelado por Agua"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtnAguaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rbtnNitrogeno">
       <Properties>
@@ -357,13 +412,75 @@
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPOxigenoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPDioxidoCarbono">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPDioxidoCarbonoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPVaporAgua">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPVaporAguaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblSalinidad">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salinidad del agua g/L"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSalinidad">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblMetodoCongelacion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Metodo de congelaci&#xf3;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtMetodoCongelacion">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTiempoExposicion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tiempo de Exposici&#xf3;n  m/s"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTiempoExposicion">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCodigoAlimentario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo Alimentario"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigoAlimentario">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTemperaturaRecomendada">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Temperatura Recomendada"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTemperaturaRecomendada">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
