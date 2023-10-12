@@ -5,10 +5,10 @@ import javax.swing.JOptionPane;
 public class CongeladosPorNitrogeno extends Congelados {
 
     protected String metodoCongelacion;
-    protected String tiempoExposicion;
+    protected double tiempoExposicion;
 
-    public CongeladosPorNitrogeno(String metodoCongelacion, String tiempoExposicion, String fechaEnvasado, String paisOrigen, String nombre, String fechaCaducidad, int lote, double temperaturaRecomendada) {
-        super(fechaEnvasado, paisOrigen, nombre, fechaCaducidad, lote, temperaturaRecomendada);
+    public CongeladosPorNitrogeno(String nombre, String fechaCaducidad, int lote, String fechaEnvasado, String paisOrigen, double temperaturaRecomendada, String metodoCongelacion, double tiempoExposicion) {
+        super(nombre, fechaCaducidad, lote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
         this.metodoCongelacion = metodoCongelacion;
         this.tiempoExposicion = tiempoExposicion;
     }
@@ -21,11 +21,11 @@ public class CongeladosPorNitrogeno extends Congelados {
         this.metodoCongelacion = metodoCongelacion;
     }
 
-    public String getTiempoExposicion() {
+    public double getTiempoExposicion() {
         return tiempoExposicion;
     }
 
-    public void setTiempoExposicion(String tiempoExposicion) {
+    public void setTiempoExposicion(double tiempoExposicion) {
         this.tiempoExposicion = tiempoExposicion;
     }
 

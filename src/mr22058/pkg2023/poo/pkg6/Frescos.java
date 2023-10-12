@@ -7,7 +7,7 @@ public class Frescos extends Productos {
     protected String fechaEnvasado;
     protected String paisOrigen;
 
-    public Frescos(String fechaEnvasado, String paisOrigen, String nombre, String fechaCaducidad, int lote) {
+    public Frescos(String nombre, String fechaCaducidad, int lote, String fechaEnvasado, String paisOrigen) {
         super(nombre, fechaCaducidad, lote);
         this.fechaEnvasado = fechaEnvasado;
         this.paisOrigen = paisOrigen;

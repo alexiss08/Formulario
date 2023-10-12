@@ -4,18 +4,18 @@ import javax.swing.JOptionPane;
 
 public class CongeladosPorAgua extends Congelados {
 
-    protected String salinidadAgua;
+    protected double salinidadAgua;
 
-    public CongeladosPorAgua(String salinidadAgua, String fechaEnvasado, String paisOrigen, String nombre, String fechaCaducidad, int lote, double temperaturaRecomendada) {
-        super(fechaEnvasado, paisOrigen, nombre, fechaCaducidad, lote, temperaturaRecomendada);
+    public CongeladosPorAgua(String nombre, String fechaCaducidad, int lote, String fechaEnvasado, String paisOrigen, double temperaturaRecomendada, double salinidadAgua) {
+        super(nombre, fechaCaducidad, lote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
         this.salinidadAgua = salinidadAgua;
     }
 
-    public String getSalinidadAgua() {
+    public double getSalinidadAgua() {
         return salinidadAgua;
     }
 
-    public void setSalinidadAgua(String salinidadAgua) {
+    public void setSalinidadAgua(double salinidadAgua) {
         this.salinidadAgua = salinidadAgua;
     }
 

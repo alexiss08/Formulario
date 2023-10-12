@@ -6,8 +6,8 @@ public class Refrigerados extends Congelados {
 
     protected int cosa;
 
-    public Refrigerados(String fechaEnvasado, String paisOrigen, String nombre, String fechaCaducidad, int lote, double temperaturaRecomendada, int cosa) {
-        super(fechaEnvasado, paisOrigen, nombre, fechaCaducidad, lote, temperaturaRecomendada);
+    public Refrigerados(String nombre, String fechaCaducidad, int lote, String fechaEnvasado, String paisOrigen, int cosa, double temperaturaRecomendada) {
+        super(nombre, fechaCaducidad, lote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
         this.cosa = cosa;
     }
 
@@ -18,7 +18,7 @@ public class Refrigerados extends Congelados {
                 + "\nLote # " + this.lote + "\nFecha de envasado: " + this.fechaEnvasado
                 + "\nPaís de orígen: " + this.paisOrigen
                 + "\nTemperatura recomendada: " + this.temperaturaRecomendada
-                + "\nCódigo de observación sanitaria: " + this.cosa);
+                + "\nCódigo supervision alimentario: " + this.cosa);
     }
 
 }

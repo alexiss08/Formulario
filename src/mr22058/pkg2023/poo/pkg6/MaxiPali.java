@@ -47,9 +47,9 @@ public class MaxiPali {
        CarneRes.getInfo();
        
        
-       CongeladosPorNitrogeno Helado = new CongeladosPorNitrogeno(1,"Helado de Chocolate","18/09/2023","2/10/2023",
-               "El Salvador","-10 °C","Nitrogeno liquido + el Helado","30");
-       Helado.getInfo();
+       CongeladosPorNitrogeno Helado = new CongeladosPorNitrogeno("Helado de Chocolate","18/09/2023",1,"2/10/2023",
+               "El Salvador",-10,"Nitrogeno liquido + el Helado",30);
+       Helado.mostrar();
        */
     }
     

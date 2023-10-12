@@ -6,8 +6,8 @@ public class Congelados extends Frescos {
 
     protected double temperaturaRecomendada;
 
-    public Congelados(String fechaEnvasado, String paisOrigen, String nombre, String fechaCaducidad, int lote, double temperaturaRecomendada) {
-        super(fechaEnvasado, paisOrigen, nombre, fechaCaducidad, lote);
+    public Congelados(String nombre, String fechaCaducidad, int lote, String fechaEnvasado, String paisOrigen, double temperaturaRecomendada) {
+        super(nombre, fechaCaducidad, lote, fechaEnvasado, paisOrigen);
         this.temperaturaRecomendada = temperaturaRecomendada;
     }
 
